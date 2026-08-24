@@ -38,6 +38,15 @@
             "show_gift_card_recipient": true
           }
         },
+        "aomai_crosssell_ac4VRd": {
+          "type": "aomai-crosssell",
+          "settings": {
+            "heading": "PAIRS WITH",
+            "option_placeholder": "Size",
+            "add_label": "Add",
+            "products_limit": 6
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -49,6 +58,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "aomai_crosssell_ac4VRd",
         "description"
       ],
       "settings": {
