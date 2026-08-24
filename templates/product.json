@@ -38,7 +38,11 @@
             "show_gift_card_recipient": true
           }
         },
-        "aomai_crosssell_UQLnAL": {
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "aomai_crosssell_HCMEhk": {
           "type": "aomai-crosssell",
           "settings": {
             "heading": "Pairs with",
@@ -46,10 +50,6 @@
             "add_label": "Add",
             "products_limit": 6
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         }
       },
       "block_order": [
@@ -58,8 +58,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "aomai_crosssell_UQLnAL",
-        "description"
+        "description",
+        "aomai_crosssell_HCMEhk"
       ],
       "settings": {
         "enable_sticky_info": true,
