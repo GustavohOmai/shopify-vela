@@ -41,15 +41,6 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "aomai_crosssell_HCMEhk": {
-          "type": "aomai-crosssell",
-          "settings": {
-            "heading": "Pairs with",
-            "option_placeholder": "Size",
-            "add_label": "Add",
-            "products_limit": 6
-          }
         }
       },
       "block_order": [
@@ -58,8 +49,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "aomai_crosssell_HCMEhk"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
