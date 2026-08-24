@@ -96,6 +96,9 @@
 
                   {%- liquid
                     assign crosssell_products = product.metafields.shopify--discovery--product_recommendation.complementary_products.value
+                    if crosssell_products == blank
+                      assign crosssell_products = product.metafields.shopify--discovery--product_recommendation.related_products.value
+                    endif
                     if crosssell_products == blank and recommendations.performed
                       assign crosssell_products = recommendations.products
                     endif
