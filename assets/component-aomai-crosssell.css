@@ -1,0 +1,241 @@
+/* Stays in flow while empty so the IntersectionObserver can see it. Spacing
+   lives on the slider so an unloaded block takes up no room. */
+.aomai-crosssell {
+  display: block;
+}
+
+.aomai-crosssell__slider {
+  margin: 2.5rem 0;
+}
+
+.aomai-crosssell__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.aomai-crosssell__heading {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.13rem;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+}
+
+.aomai-crosssell__nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.aomai-crosssell .slider-button {
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 0;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.aomai-crosssell .slider-button .svg-wrapper {
+  display: flex;
+  width: 2rem;
+  height: 1.6rem;
+}
+
+/* icon-arrow already points right: prev flips, next stays put. */
+.aomai-crosssell .slider-button .icon {
+  width: 2rem;
+  height: 1.6rem;
+  transform: none;
+}
+
+.aomai-crosssell .slider-button--prev .icon {
+  transform: rotate(180deg);
+}
+
+.aomai-crosssell .slider-button--next:not([disabled]):hover .icon {
+  transform: translateX(0.2rem);
+}
+
+.aomai-crosssell .slider-button--prev:not([disabled]):hover .icon {
+  transform: rotate(180deg) translateX(0.2rem);
+}
+
+.aomai-crosssell .slider-button[disabled] .icon {
+  color: rgba(var(--color-foreground), 0.3);
+}
+
+.aomai-crosssell__list {
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  scroll-padding-left: 0;
+}
+
+.aomai-crosssell__list.slider--everywhere {
+  margin-bottom: 0;
+}
+
+.aomai-crosssell__slide {
+  flex: 0 0 calc(85% - 0.6rem);
+}
+
+.aomai-crosssell .slider.slider--everywhere .aomai-crosssell__slide {
+  scroll-snap-align: start;
+}
+
+@media screen and (min-width: 750px) {
+  .aomai-crosssell__slide {
+    flex: 0 0 calc(55% - 0.6rem);
+    min-width: 30rem;
+  }
+}
+
+.aomai-crosssell__card {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  height: 100%;
+  padding: 1.2rem;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.aomai-crosssell__media {
+  flex: 0 0 34%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+}
+
+.aomai-crosssell__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.aomai-crosssell__info {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.aomai-crosssell__title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.35;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+
+
+.aomai-crosssell__price {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: rgb(var(--color-foreground));
+}
+
+.aomai-crosssell__form .form,
+.aomai-crosssell__form form {
+  display: flex;
+  align-items: stretch;
+  gap: 0.8rem;
+}
+
+.aomai-crosssell__select-wrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+}
+
+.aomai-crosssell__select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-height: 4.4rem;
+  padding: 0 3.2rem 0 1.4rem;
+  border: 0.2rem solid rgb(var(--color-foreground));
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  font-family: inherit;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.aomai-crosssell__select:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.2rem;
+}
+
+.aomai-crosssell__select-wrap .icon-caret {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  width: 1.1rem;
+  height: 0.7rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgb(var(--color-foreground));
+}
+
+.aomai-crosssell__add {
+  position: relative;
+  flex: 0 0 auto;
+  min-height: 4.4rem;
+  padding: 0 1.6rem;
+  border: 0.2rem solid rgb(var(--color-foreground));
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  font-family: inherit;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.aomai-crosssell__add:not([disabled]):hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.aomai-crosssell__add[disabled] {
+  border-color: rgba(var(--color-foreground), 0.12);
+  color: rgba(var(--color-foreground), 0.4);
+  cursor: not-allowed;
+}
+
+.aomai-crosssell__add .loading__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aomai-crosssell__add .spinner {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.aomai-crosssell__add.loading > span {
+  visibility: hidden;
+}
+
+.aomai-crosssell__form .product-form__error-message-wrapper {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+}
